@@ -18,7 +18,6 @@ public class Model {
         this.view = v;
     }
 
-
     public void updateTraffic() throws IOException, JSONException {
         caller.getNewCall();
         view.updateView(caller.getI76SAvg(), caller.getI76NAvg(), caller.getI476SAvg(), caller.getI476NAvg());
