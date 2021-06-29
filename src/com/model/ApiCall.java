@@ -57,7 +57,7 @@ public class ApiCall {
                 String inline = "";
                 Scanner scanner = new Scanner(url.openStream());
 
-                //Write all the JSON data into a string using a scanner
+                // Write all the JSON data into a string using a scanner
                 while (scanner.hasNext()) {
                     inline += scanner.nextLine();
                 }
@@ -65,7 +65,7 @@ public class ApiCall {
                 //Close the scanner
                 scanner.close();
 
-                String jsonString = inline; //assign your JSON String here
+                String jsonString = inline; // Assign the JSON String
                 JSONObject obj = new JSONObject(jsonString);
                 int currentSpeed = obj.getJSONObject("flowSegmentData").getInt("currentSpeed");
                 I76STotal += currentSpeed;
