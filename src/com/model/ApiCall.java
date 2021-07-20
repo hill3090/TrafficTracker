@@ -191,5 +191,28 @@ public class ApiCall {
         return String.valueOf(I76SAvg);
     }
 
+    public void setI76SAvg(int i76SAvg) { this.I76SAvg = i76SAvg; }
+
+    public void setI76NAvg(int i76NAvg) { this.I76NAvg = i76NAvg; }
+
+    public void setI476SAvg(int i476SAvg) { this.I476SAvg = i476SAvg; }
+
+    public void setI476NAvg(int i476NAvg) { this.I476NAvg = i476NAvg; }
+
+    public void setI76STotal(int i76STotal) {
+        I76STotal = i76STotal;
+    }
+
+    public void setI76NTotal(int i76NTotal) {
+        I76NTotal = i76NTotal;
+    }
+
+    public void setI476STotal(int i476STotal) {
+        I476STotal = i476STotal;
+    }
+
+    public void setI476NTotal(int i476NTotal) {
+        I476NTotal = i476NTotal;
+    }
 }
 

@@ -17,8 +17,6 @@ public class Adapter implements ActionListener {
 
     private Controller c;
     private View v;
-    private int x;
-    private int y;
 
     public Adapter(Controller c, View v)    {
         this.c = c;

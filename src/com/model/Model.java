@@ -33,23 +33,28 @@ public class Model {
     public void updateTraffic() throws JSONException, IOException {
         caller.getNewCall();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        String date  = dateFormat.format(new Date());
-        model.insertRow(0, new Object[] {date, "I-76", "North", caller.getI76NAvg()});
-        model.insertRow(1, new Object[] {date, "I-76", "South", caller.getI76SAvg()});
-        model.insertRow(2, new Object[] {date, "I-476", "North", caller.getI76NAvg()});
-        model.insertRow(3, new Object[] {date, "I-476", "South", caller.getI476SAvg()});
+        String date = dateFormat.format(new Date());
+        model.insertRow(0, new Object[]{date, "I-76", "North", caller.getI76NAvg()});
+        model.insertRow(1, new Object[]{date, "I-76", "South", caller.getI76SAvg()});
+        model.insertRow(2, new Object[]{date, "I-476", "North", caller.getI476NAvg()});
+        model.insertRow(3, new Object[]{date, "I-476", "South", caller.getI476SAvg()});
         model.fireTableDataChanged();
+        caller.setI76NTotal(0);
+        caller.setI76STotal(0);
+        caller.setI476NTotal(0);
+        caller.setI476STotal(0);
         view.updateView(model);
     }
+}
+    /*public void reset() {
+        model.insertRow(0, new Object[]{"", "", "", ""});
+        model.insertRow(1, new Object[]{"", "", "", ""});
+        model.insertRow(2, new Object[]{"", "", "", ""});
+        model.insertRow(3, new Object[]{"", "", "", ""});
+        model.fireTableDataChanged();
+        view.updateView(model);
+    }*/
 
-    public void reset() {
-        model.insertRow(0, new Object[] {"", "", "", ""});
-        model.insertRow(0, new Object[] {"", "", "", ""});
-        model.insertRow(0, new Object[] {"", "", "", ""});
-        model.insertRow(0, new Object[] {"", "", "", ""});
-        model.fireTableDataChanged();
-        view.updateView(model);
-    }
 
 
     /*public void updateTraffic() throws IOException, JSONException {
@@ -63,4 +68,3 @@ public class Model {
         System.out.println("I476 South Bound: " + caller.getI476SAvg());
         System.out.println("I476 South Bound: " + caller.getI476NAvg());
     }*/
-}

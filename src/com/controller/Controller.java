@@ -14,7 +14,6 @@ public class Controller {
     }
 
     public void updateModel() throws JSONException, IOException {
-        model.reset();
         model.updateTraffic();
     }
 }

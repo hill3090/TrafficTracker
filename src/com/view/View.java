@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class View {
 
-    // private Controller controller;
+    private Controller controller;
     private JFrame gui;
     private JButton refresh;
     private JLabel status;
@@ -55,6 +55,7 @@ public class View {
     }
 
     public void setActionListener(Controller c) {
+        this.adapter = new Adapter(c, this);
         refresh.addActionListener(adapter);
     }
 }
