@@ -177,20 +177,18 @@ public class ApiCall {
         I476SAvg = I476STotal / I476S.getLatitude().size();
     }
 
-    public double getI76NAvg()  {
-        return I76NAvg;
+    public String getI76NAvg()  {
+        return String.valueOf(I76NAvg);
     }
 
-    public double getI76SAvg()  {
-        return I76SAvg;
+    public String getI76SAvg()  {
+        return String.valueOf(I76SAvg);
     }
 
-    public double getI476NAvg()  {
-        return I76NAvg;
-    }
+    public String getI476NAvg()  { return String.valueOf(I76NAvg); }
 
-    public double getI476SAvg()  {
-        return I76SAvg;
+    public String getI476SAvg()  {
+        return String.valueOf(I76SAvg);
     }
 
 }
